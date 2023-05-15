@@ -2,19 +2,19 @@ export default function handler(req, res) {
   res.status(200).json([
     {
       img: "https://links.papareact.com/2io",
-      title: "Outdoor getaways",
+      title: "Outdoor Getaways",
     },
     {
       img: "https://links.papareact.com/q7j",
-      title: "Unique stays",
+      title: "Unique Stays",
     },
     {
       img: "https://links.papareact.com/s03",
-      title: "Entire homes",
+      title: "Entire Homes",
     },
     {
       img: "https://links.papareact.com/8ix",
-      title: "Pet allowed",
+      title: "Pet Allowed",
     },
   ]);
 }
