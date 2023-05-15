@@ -5,6 +5,8 @@ import Header from "@/components/Header/Header";
 import Banner from "@/components/Banner/Banner";
 import ExploreCard from "@/components/Explore_Card/ExploreCard";
 import LiveCard from "@/components/Live_Card/LiveCard";
+import LargeCard from "@/components/Large_Card/LargeCard";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,7 +47,20 @@ export default function Home({ exploreData, cardsData }) {
             })}
           </div>
         </section>
+
+        {/* Large Card Section */}
+        <section className="relative py-16">
+          <LargeCard
+            img={"https://links.papareact.com/4cj"}
+            title={"The Greatest Outdoors"}
+            description={"Wishlists created by Airbnb."}
+            buttonText={"Get Inspired"}
+          />
+        </section>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
