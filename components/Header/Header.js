@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="sticky items-center top-0 z-50 grid grid-cols-3 space-x-2 bg-white shadow-md p-5 md:px-10">
+    <header className="sticky items-center top-0 z-50 grid grid-cols-3 space-x-2 bg-white shadow-md p-3 md:px-6">
       {/* Left  */}
       <div className="relative flex items-center h-10 cursor-pointer">
         <Image
