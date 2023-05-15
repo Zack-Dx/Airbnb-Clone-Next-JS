@@ -70,8 +70,12 @@ export default function Home({ exploreData, cardsData }) {
 export async function getStaticProps() {
   try {
     // Explore Data
-    const exploreResponse = await fetch(`http://localhost:3000/api/explore`);
-    const cardResponse = await fetch(`http://localhost:3000/api/live`);
+    const exploreResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/explore`
+    );
+    const cardResponse = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/live`
+    );
 
     if (!exploreResponse.ok || !cardResponse.ok) {
       throw new Error(`Failed to fetch data.`);
