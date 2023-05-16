@@ -128,14 +128,15 @@ const Header = () => {
           </div>
         </div>
         {searchInput && (
-          <div className="flex flex-col col-span-3 md:items-center mt-5">
+          <div className="flex flex-col col-span-3 md:items-center   mt-5">
             <DateRangePicker
+              className="overflow-x-auto"
               ranges={[selectionRange]}
               minDate={new Date()}
               rangeColors={["#FD5B61"]}
               onChange={handleSelect}
             />
-            <div className="flex  items-center border-b mb-4">
+            <div className="flex items-center border-b mb-4 space-x-2">
               <h2 className="flex-grow font-semibold text-2xl pl-3">
                 Number of Guests
               </h2>
@@ -157,11 +158,11 @@ const Header = () => {
                 value={noOfGuests}
                 onChange={(e) => setNoofGuests(e.target.value)}
                 min={1}
-                className="w-12 pl-3 text-lg outline-none text-red-400"
+                className="w-12 pl-2 text-lg outline-none text-red-400"
                 type="number"
               />
             </div>
-            <div className="flex">
+            <div className="flex space-x-6">
               <button onClick={resetInput} className="flex-grow text-gray-500">
                 Cancel
               </button>
