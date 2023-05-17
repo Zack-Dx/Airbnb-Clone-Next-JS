@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
+import InfoCard from "@/components/Info_Card/InfoCard";
 const Search = ({ searchResults }) => {
   const router = useRouter();
 
@@ -31,6 +32,12 @@ const Search = ({ searchResults }) => {
               <p className="button">Price</p>
               <p className="button">Rooms and Beds</p>
               <p className="button">More Filters</p>
+            </div>
+
+            <div className="flex flex-col">
+              {searchResults?.map((item) => {
+                return <InfoCard key={item.img} item={item} />;
+              })}
             </div>
           </section>
         </main>
