@@ -128,9 +128,9 @@ const Header = () => {
           </div>
         </div>
         {searchInput && (
-          <div className="flex flex-col col-span-3 md:items-center   mt-5">
+          <div className="flex flex-col col-span-3 md:items-center mt-5">
             <DateRangePicker
-              className="overflow-x-auto"
+              className="overflow-x-auto scrollbar-hide"
               ranges={[selectionRange]}
               minDate={new Date()}
               rangeColors={["#FD5B61"]}
