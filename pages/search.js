@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import { format } from "date-fns";
 const Search = ({ searchResults }) => {
   const router = useRouter();
-  console.log(searchResults);
 
   const { location, startDate, endDate, noOfGuests } = router.query;
 
@@ -52,5 +51,12 @@ export async function getServerSideProps() {
         searchResults,
       },
     };
-  } catch (error) {}
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        searchResults: null,
+      },
+    };
+  }
 }
