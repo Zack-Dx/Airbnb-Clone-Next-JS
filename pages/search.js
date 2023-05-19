@@ -17,11 +17,16 @@ const Search = ({ searchResults }) => {
   return (
     <>
       <div>
-        <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
+        <Header
+          placeholder={`${location} | ${range} | ${noOfGuests} ${
+            noOfGuests === "1" ? "guest" : "guests"
+          }`}
+        />
         <main className="flex">
           <section className="flex-grow px-12 pt-14 mb-5">
             <p className="text-sm">
-              300+ Stays - {range} - for {noOfGuests} guests
+              300+ Stays - {range} - for {noOfGuests}{" "}
+              {noOfGuests === `1` ? "guest" : "guests"}
             </p>
             <h1 className="text-3xl font-semibold mt-2 mb-6">
               Stays in {location}
