@@ -5,11 +5,11 @@ const InfoCard = ({
 }) => {
   return (
     <>
-      <div className="flex py-7 px-4 mt-3 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-100 ease-out first:border-t ">
-        <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
+      <div className="flex flex-col md:flex-row items-center py-7 px-4 mt-5 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-100 ease-out first:border-t ">
+        <div className="relative h-40 items-center w-full md:h-52 md:w-80 flex-shrink-0">
           {
             <Image
-              className="rounded-2xl"
+              className="rounded-xl"
               src={img}
               fill
               alt={title}
@@ -35,18 +35,18 @@ const InfoCard = ({
               />
             </svg>
           </div>
-          <h4 className="text-xl">{title}</h4>
-          <div className="border-b pt-2 w-12" />
+          <h4 className="text-xl pt-3">{title}</h4>
+          <div className="border-b  w-12" />
           <p className="pt-2 text-sm text-gray-500">{description}</p>
-          <div className="flex justify-between">
-            <p className="flex items-center">
+          <div className="flex justify-between pt-5">
+            <p className="flex items-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                className="w-6 h-6 text-red-500"
+                className="w-6 h-6 text-red-500 mr-1"
               >
                 <path
                   stroke-linecap="round"
