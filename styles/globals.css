@@ -6,4 +6,7 @@
   .button {
     @apply text-sm py-2 px-4 border cursor-pointer hover:shadow-lg active:scale-95 transition transform duration-100 ease-out bg-gray-100 rounded-full;
   }
+  .mob_nav_btn {
+    @apply w-full py-3 text-left px-6 transition-colors hover:bg-gray-100;
+  }
 }

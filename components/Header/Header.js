@@ -12,6 +12,13 @@ const Header = ({ placeholder }) => {
   const [noOfGuests, setNoofGuests] = useState(1);
   const router = useRouter();
 
+  // Mobile Nav
+  const [sideBar, setSidebar] = useState(false);
+
+  const handleSidebar = () => {
+    setSidebar(!sideBar);
+  };
+
   const selectionRange = {
     startDate,
     endDate,
@@ -48,7 +55,7 @@ const Header = ({ placeholder }) => {
         {/* Left  */}
         <div
           onClick={() => router.push("/")} // To redirect to previous page
-          className="relative flex items-center h-10 cursor-pointer"
+          className="relative animate-pulse flex items-center h-10 cursor-pointer"
         >
           <Image
             src={"https://links.papareact.com/qd3"}
@@ -84,28 +91,22 @@ const Header = ({ placeholder }) => {
         </div>
 
         {/* Mobile Nav */}
-        <div className="flex flex-col font-light text-sm shadow-2xl py-3  rounded-md justify-center mr-auto absolute right-2 w-60 top-14  bg-white">
-          <button className="w-full py-3 font-medium transition-colors hover:bg-gray-100 text-left px-6">
-            Sign up
-          </button>
-          <button className="w-full py-3 text-left px-6 mb-2 transition-colors hover:bg-gray-100">
-            Log in
-          </button>
-          <hr />
-          <button className="w-full py-3 text-left px-6 transition-colors hover:bg-gray-100">
-            Airbnb
-          </button>
-          <button className="w-full py-3 text-left px-6 transition-colors hover:bg-gray-100">
-            Help
-          </button>
-        </div>
+        {sideBar ? (
+          <div className="flex flex-col font-light text-sm shadow-2xl py-3 rounded-md justify-center mr-auto absolute right-2 w-60 top-20 bg-white">
+            <button className="mob_nav_btn font-medium">Sign up</button>
+            <button className="mob_nav_btn">Log in</button>
+            <hr />
+            <button className="mob_nav_btn">Airbnb</button>
+            <button className="mob_nav_btn">Help</button>
+          </div>
+        ) : null}
 
         {/* Right */}
         <div className="flex items-center justify-end space-x-4 text-gray-600 text-sm font-semibold">
-          <span className="hidden md:inline-flex cursor-pointer  hover:bg-gray-100 py-2 px-4 rounded-full">
+          <span className=" hidden md:inline-flex cursor-pointer  hover:bg-gray-100 py-2 px-4 rounded-full">
             Airbnb your home
           </span>
-          <div className="px-3 py-2 cursor-pointer hover:bg-gray-100 rounded-full">
+          <div className="  px-3 py-2 cursor-pointer hover:bg-gray-100 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -122,7 +123,10 @@ const Header = ({ placeholder }) => {
             </svg>
           </div>
 
-          <div className="flex space-x-2 border-2 p-1 md:p-2 rounded-full hover:shadow-md cursor-pointer ">
+          <div
+            onClick={handleSidebar}
+            className="flex space-x-2 border-2 p-1 md:p-2 rounded-full hover:shadow-md cursor-pointer "
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
