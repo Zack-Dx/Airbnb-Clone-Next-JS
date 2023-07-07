@@ -83,6 +83,23 @@ const Header = ({ placeholder }) => {
           </div>
         </div>
 
+        {/* Mobile Nav */}
+        <div className="flex flex-col font-light text-sm shadow-2xl py-3  rounded-md justify-center mr-auto absolute right-2 w-60 top-14  bg-white">
+          <button className="w-full py-3 font-medium transition-colors hover:bg-gray-100 text-left px-6">
+            Sign up
+          </button>
+          <button className="w-full py-3 text-left px-6 mb-2 transition-colors hover:bg-gray-100">
+            Log in
+          </button>
+          <hr />
+          <button className="w-full py-3 text-left px-6 transition-colors hover:bg-gray-100">
+            Airbnb
+          </button>
+          <button className="w-full py-3 text-left px-6 transition-colors hover:bg-gray-100">
+            Help
+          </button>
+        </div>
+
         {/* Right */}
         <div className="flex items-center justify-end space-x-4 text-gray-600 text-sm font-semibold">
           <span className="hidden md:inline-flex cursor-pointer  hover:bg-gray-100 py-2 px-4 rounded-full">
